@@ -1,4 +1,4 @@
-# -Console-Finances
+# Console-Finances
 code for analysing the financial records of a company
 
 JavaScript code that analyses the records to calculate each of the following:
@@ -20,3 +20,8 @@ The greatest decrease in losses (date and difference in the amounts) over the en
 When you open your code in the browser your resulting analysis should look similar to the following:
 
 <img width="1203" alt="Screenshot 2023-12-20 at 10 30 11" src="https://github.com/timeades/Console-Finances/assets/13002711/416e294d-7651-4540-b826-576643b5f67c">
+
+## Getting Started
+Clone the repository:
+
+Open the index.html file in your browser.
