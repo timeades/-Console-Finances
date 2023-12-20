@@ -1,3 +1,5 @@
+// Financial dataset
+
 var finances = [
     ['Jan-2010', 867884],
     ['Feb-2010', 984655],
@@ -87,3 +89,14 @@ var finances = [
     ['Feb-2017', 671099],
   ];
   
+  // Financial analysis function
+
+  // Loop through the data to perform calculations
+
+  // Calculate change in profit/loss (skip for the first record)
+
+  // Update greatest increase and decrease
+
+  // Calculate average change
+
+  // Call the function to write the results to the console
