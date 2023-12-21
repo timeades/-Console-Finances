@@ -1,5 +1,4 @@
 # Console-Finances
-code for analysing the financial records of a company
 
 JavaScript code that analyses the records to calculate each of the following:
 
