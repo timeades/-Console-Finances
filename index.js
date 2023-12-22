@@ -134,12 +134,12 @@ function calculateFinancialAnalysis(data) {
   console.log(
     "Greatest Increase in Profits/Losses:",
     greatestIncrease.date,
-    "($" + greatestIncrease.amount.toFixed(2) + ")"
+    "($" + greatestIncrease.amount.toFixed() + ")"
   );
   console.log(
     "Greatest Decrease in Profits/Losses:",
     greatestDecrease.date,
-    "($" + greatestDecrease.amount.toFixed(2) + ")"
+    "($" + greatestDecrease.amount.toFixed() + ")"
   );
 }
 
