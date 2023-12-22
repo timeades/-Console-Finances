@@ -89,14 +89,59 @@ var finances = [
     ['Feb-2017', 671099],
   ];
   
-  // Financial analysis function
+ // Financial analysis function
+function calculateFinancialAnalysis(data) {
+  // Initialize variables for calculations
+  let totalMonths = data.length;
+  let totalProfitLoss = 0;
+  let totalChange = 0;
+  let greatestIncrease = { date: "", amount: -Infinity };
+  let greatestDecrease = { date: "", amount: Infinity };
 
   // Loop through the data to perform calculations
+  for (let i = 0; i < data.length; i++) {
+    // Extract date and profit/loss from the current record
+    let [date, profitLoss] = data[i];
 
-  // Calculate change in profit/loss (skip for the first record)
+    // Calculate total profit/loss
+    totalProfitLoss += profitLoss;
 
-  // Update greatest increase and decrease
+    // Calculate change in profit/loss (skip for the first record)
+    if (i > 0) {
+      let change = profitLoss - data[i - 1][1];
+      totalChange += change;
+
+      // Update greatest increase and decrease
+      if (change > greatestIncrease.amount) {
+        greatestIncrease = { date, amount: change };
+      }
+
+      if (change < greatestDecrease.amount) {
+        greatestDecrease = { date, amount: change };
+      }
+    }
+  }
 
   // Calculate average change
+  let averageChange = totalChange / (totalMonths - 1);
 
-  // Call the function to write the results to the console
+  // Print the financial analysis
+  console.log("Financial Analysis");
+  console.log("---------------------------------------------------------------------");
+  console.log("Total Months:", totalMonths);
+  console.log("Total: $", totalProfitLoss.toFixed(2));
+  console.log("Average Change: $", averageChange.toFixed(2));
+  console.log(
+    "Greatest Increase in Profits/Losses:",
+    greatestIncrease.date,
+    "($" + greatestIncrease.amount.toFixed(2) + ")"
+  );
+  console.log(
+    "Greatest Decrease in Profits/Losses:",
+    greatestDecrease.date,
+    "($" + greatestDecrease.amount.toFixed(2) + ")"
+  );
+}
+
+// Call the function with the provided dataset
+calculateFinancialAnalysis(finances);
